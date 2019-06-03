@@ -290,11 +290,11 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int w = Integer.parseInt(String.valueOf(editTextValor2.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor2.getText()));
 
-                int area = (h * w / 2);
-                int centroide = h / 3;
+                float area = (h * w / 2);
+                float centroide = h / 3;
                 double inerciaX = (w * Math.pow(h, 3)) / 36;
                 double inerciaY = (w * Math.pow(h, 3)) / 48;
 
@@ -313,12 +313,12 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int b0 = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int b1 = Integer.parseInt(String.valueOf(editTextValor3.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float b0 = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float b1 = Float.parseFloat(String.valueOf(editTextValor3.getText()));
 
-                int area = (h / 2) * (b0 + b1);
-                int centroide = (h / 3) * ((b0 + 2 * b1) / (b0 + b1));
+                float area = (h / 2) * (b0 + b1);
+                float centroide = (h / 3) * ((b0 + 2 * b1) / (b0 + b1));
                 double inerciaX = (Math.pow(h, 3) / 36) * ((Math.pow(b0, 2) + 4 * b0 * b1 + Math.pow(b1, 2)) / (b0 + b1));
                 double inerciaY = (Math.pow(h, 3) / 48) * (Math.pow(b0, 3) + Math.pow(b0, 2) * b1 + Math.pow(b1, 2) * b0 + Math.pow(b1, 3));
 
@@ -337,12 +337,12 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int w = Integer.parseInt(String.valueOf(editTextValor2.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor2.getText()));
 
-                int area = (h * w);
-                int centroideX = h / 2;
-                int centroideY = w / 2;
+                float area = (h * w);
+                float centroideX = h / 2;
+                float centroideY = w / 2;
                 double inerciaX = (w * Math.pow(h, 3)) / 12;
                 double inerciaY = (h * Math.pow(w, 3)) / 12;
 
@@ -361,10 +361,10 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int w = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int b = h / 2;
-                int a = w / 2;
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float b = h / 2;
+                float a = w / 2;
 
                 double area = a * b * Math.PI;
                 double inerciaX = 0.25 * Math.PI * Math.pow(b, 3) * a;
@@ -385,8 +385,8 @@ public class CalculosActivity extends Activity {
             if (figura.equals("fig5_final")) {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
 
-                int d = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int r = d / 2;
+                float d = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float r = d / 2;
 
                 double area = Math.PI * Math.pow(r, 2);
                 double inercia = (Math.PI * Math.pow(r, 4)) / 4;
@@ -395,18 +395,21 @@ public class CalculosActivity extends Activity {
                         "\n\nEl centroide es igual a: \ne = " + r + " cm" +
                         "\n\nLa incercia es igual a: \nJ = " + inercia + " cm⁴"
                 );
+                Intent i = new Intent(CalculosActivity.this, ResultadosActivity.class);
+                i.putExtra("resultados", respuesta);
+                startActivity(i);
             }
             if (figura.equals("fig6_final")) {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
 
-                int d = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int t = Integer.parseInt(String.valueOf(editTextValor2.getText()));
+                float d = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float t = Float.parseFloat(String.valueOf(editTextValor2.getText()));
 
-                int d2 = d - 2 * t;
+                float d2 = d - 2 * t;
 
                 double area = (Math.PI / 4) * (Math.pow(d, 2) - Math.pow(d2, 2));
-                int centroide = d / 2;
+                float centroide = d / 2;
                 double inercia = (Math.PI / 64) * (Math.pow(d, 4) - Math.pow(d2, 4));
 
                 String respuesta = ("El área es igual a: \nA = " + area + " cm²" +
@@ -423,13 +426,13 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int w = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int t = Integer.parseInt(String.valueOf(editTextValor3.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float t = Float.parseFloat(String.valueOf(editTextValor3.getText()));
 
                 double area = h * t + (t * h) / 2 - Math.pow(t, 2) / 2;
-                int centroideX = w / 2;
-                int centroideY = h / 2;
+                float centroideX = w / 2;
+                float centroideY = h / 2;
                 double inerciaX = w * Math.pow(t, 3) / 12 + 2 * t * Math.pow(((h - t) / 2), 3) / 12;
                 double inerciaY = t * Math.pow(w, 3) / 12 + 2 * Math.pow(t, 3) * ((h - t) / 2) / 12;
 
@@ -450,14 +453,14 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
                 EditText editTextValor4 = findViewById(R.id.editTextValor4);
 
-                int H = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int B = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int h = Integer.parseInt(String.valueOf(editTextValor3.getText()));
-                int b = Integer.parseInt(String.valueOf(editTextValor4.getText()));
+                float H = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float B = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor3.getText()));
+                float b = Float.parseFloat(String.valueOf(editTextValor4.getText()));
 
                 double area = B * H * 2 * b * h;
-                int centroideX = B / 2;
-                int centroideY = H / 2;
+                float centroideX = B / 2;
+                float centroideY = H / 2;
                 double inerciaX = B * Math.pow(H, 3) * 2 * b * Math.pow(h, 3) / 12;
 
                 String respuesta = ("El área es igual a: \nA = " + area + " cm²" +
@@ -475,9 +478,9 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
 
-                int h = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int w = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int t = Integer.parseInt(String.valueOf(editTextValor3.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float t = Float.parseFloat(String.valueOf(editTextValor3.getText()));
 
                 double area = w * t + t * (h - t);
                 double centroideX = (t / 2 * (Math.pow(w, 2) + h * t - Math.pow(t, 2))) / (w * t + h * t + Math.pow(t, 2));
@@ -502,12 +505,12 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
                 EditText editTextValor4 = findViewById(R.id.editTextValor4);
 
-                int H = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int B = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int h = Integer.parseInt(String.valueOf(editTextValor3.getText()));
-                int b = Integer.parseInt(String.valueOf(editTextValor4.getText()));
+                float H = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float B = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float h = Float.parseFloat(String.valueOf(editTextValor3.getText()));
+                float b = Float.parseFloat(String.valueOf(editTextValor4.getText()));
 
-                int denominador = h * (B - b) + 2 * B * (H - h);
+                float denominador = h * (B - b) + 2 * B * (H - h);
 
                 double area = B * H - b * h;
                 double centroideX = ((h * (B - b)) + (2 * Math.pow(B, 2) * (H - h))) / denominador;
@@ -529,12 +532,12 @@ public class CalculosActivity extends Activity {
                 EditText editTextValor2 = findViewById(R.id.editTextValor2);
                 EditText editTextValor3 = findViewById(R.id.editTextValor3);
 
-                int H = Integer.parseInt(String.valueOf(editTextValor1.getText()));
-                int B = Integer.parseInt(String.valueOf(editTextValor2.getText()));
-                int t = Integer.parseInt(String.valueOf(editTextValor3.getText()));
+                float H = Float.parseFloat(String.valueOf(editTextValor1.getText()));
+                float B = Float.parseFloat(String.valueOf(editTextValor2.getText()));
+                float t = Float.parseFloat(String.valueOf(editTextValor3.getText()));
 
-                int h = H - 2 * t;
-                int b = B - 2 * t;
+                float h = H - 2 * t;
+                float b = B - 2 * t;
 
                 double area = B * H - b * h;
                 double centroideX = H / 2;
@@ -556,7 +559,7 @@ public class CalculosActivity extends Activity {
             if (figura.equals("fig12_final")) {
                 EditText editTextValor1 = findViewById(R.id.editTextValor1);
 
-                int w = Integer.parseInt(String.valueOf(editTextValor1.getText()));
+                float w = Float.parseFloat(String.valueOf(editTextValor1.getText()));
 
                 double area = Math.pow(w, 2);
                 double inercia = Math.pow(w, 4) / 12;
@@ -565,6 +568,9 @@ public class CalculosActivity extends Activity {
                         "\n\nEl centroide es igual a: \ne = " + w / 2 + " cm" +
                         "\n\nLa incercia es igual a: \nJ = " + inercia + " cm⁴"
                 );
+                Intent i = new Intent(CalculosActivity.this, ResultadosActivity.class);
+                i.putExtra("resultados", respuesta);
+                startActivity(i);
             }
 
 

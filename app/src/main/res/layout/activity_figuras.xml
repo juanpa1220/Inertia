@@ -22,68 +22,68 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-271dp">
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig1"
                 android:src="@mipmap/fig1" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig2"
                 android:src="@mipmap/fig2" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig3"
                 android:src="@mipmap/fig3" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig4"
                 android:src="@mipmap/fig4" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig5"
                 android:src="@mipmap/fig5" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig6"
                 android:src="@mipmap/fig6" />
@@ -91,30 +91,30 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton7"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig7"
                 android:src="@mipmap/fig7" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig8"
                 android:src="@mipmap/fig8" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig9"
                 android:src="@mipmap/fig9" />
@@ -122,30 +122,30 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/imageButton10"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig10"
                 android:src="@mipmap/fig10" />
 
             <ImageButton
                 android:id="@+id/imageButton11"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig11"
                 android:src="@mipmap/fig11" />
 
             <ImageButton
                 android:id="@+id/imageButton12"
-                android:layout_width="100dp"
-                android:layout_height="125dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_weight="1"
                 android:onClick="onClickFig12"
                 android:src="@mipmap/fig12" />
